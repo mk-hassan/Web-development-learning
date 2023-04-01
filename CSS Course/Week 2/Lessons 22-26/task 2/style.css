@@ -1,0 +1,21 @@
+div {
+    width: 50%;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: #ddd;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2em;
+}
+
+.one {
+    font-family: 'Open Sans', sans-serif;;
+}
+
+.two {
+    font-family: 'Cairo', sans-serif;
+}
+
+.three {
+    font-family: 'Jomhuria', cursive;
+}

@@ -1,0 +1,42 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.pg-langs {
+    width: 400px;
+    margin: auto;
+
+    list-style-type: none;
+
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.html,
+.css,
+.js {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(238,238,238);
+}
+
+.html li,
+.css li,
+.js li {
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+.html-engines,
+.css-engines {
+    padding-left: 30px;
+}
+
+.js-frameworks {
+    padding-left: 0px;
+}
+
+.js {
+    list-style-position: inside;
+}

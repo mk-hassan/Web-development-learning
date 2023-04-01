@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 550px;
+
+    overflow: hidden;
+    background-color: orangered;
+}
+
+.card,
+.or {
+    float: left;
+}
+
+.card {
+    width: 250px;
+    padding: 20px;
+    background-color: #eeeeee;
+}
+
+.type {
+
+}

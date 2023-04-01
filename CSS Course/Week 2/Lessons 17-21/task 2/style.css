@@ -1,0 +1,37 @@
+/* 
+    Video - 18
+    text-align
+    direction
+    vertical-align
+
+    video - 19
+    text-decoration: { line-throgh, underline, overline }
+    text-transform: { uppercase, lowercase, capitalize }
+
+    video - 20
+    letter-spacing
+    text-indent ( like when you write code )
+    line-height ( the distance between lines vertically ) Typically 1.6
+    word-spacing
+    white-space ( How to treat [new lines, other white spaces] ) { normal, nowrap }
+    word-break 
+
+    video - 21
+    text-overflow { ellipsis }
+*/
+p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.one {
+    text-transform: uppercase;
+}
+
+.two {
+    text-transform: capitalize;
+}
+
+.three {
+    text-transform: lowercase;
+}

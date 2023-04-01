@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is task 1 for week 3">
+        <title> Task 1 </title>
+    </head>
+    <body>
+        <form method="get">
+            <input type="text" name="token" value="b92f1fc2fce391ad7af633723afd3055" hidden>
+            <label> Email </label>
+            <input type="email" name="email" value="o@o.com" readonly>
+            <hr>
+            <label> UserName </label>
+            <input type="text" name="username" autofocus required minlength="5" maxlength="20">
+            <hr>
+            <h3> Skill set </h3>
+            <div>
+                <input id="git" type="checkbox" name="skills" value="git">
+                <label for="git"> Git </label>
+            </div>
+            <div>
+                <input id="docker" type="checkbox" name="skills" value="docker">
+                <label for="docker"> Docker </label>
+            </div>
+            <div>
+                <input id="kubernates" type="checkbox" name="skills" value="Kubernates" checked>
+                <label for="kubernates"> Kubernates </label>
+            </div>
+            <div>
+                <input id="scala" type="checkbox" name="skills" value="scala">
+                <label for="scala"> Scala </label>
+            </div>
+            <div>
+                <input id="advanced-Search" type="checkbox" name="skills" value="advanced-Search">
+                <label for="advanced-Search"> Advanced-Search </label>
+            </div>
+            <hr>
+            <!-- Front-End Developer, Back-End Developer, Business Analyst, Project Manager, Scrum Master -->
+            <h3> Your job </h3>
+            <div>
+                <input id="front-end-developer" type="radio" name="job" value="front-end-developer" checked>
+                <label for="front-end-developer"> Front-end Developer </label>
+            </div>
+            <div>
+                <input id="scrum-master" type="radio" name="job" value="scrum-master">
+                <label for="scrum-master"> Scrum Master </label>
+            </div>
+            <div>
+                <input id="project-manager" type="radio" name="job" value="project-manager">
+                <label for="project-manager"> Project Manager </label>
+            </div>
+            <div>
+                <input id="business-analyst" type="radio" name="job" value="business-analyst">
+                <label for="business-analyst"> Business Analyst </label>
+            </div>
+            <div>
+                <input id="back-end-developer" type="radio" name="job" value="back-end Developer">
+                <label for="back-end-developer"> Back-End Devloper </label>
+            </div>
+            <hr>
+            <label for="pl-version"> Choose a programming language </label>
+            <select id="pl-version" name="pl-version">
+                <optgroup label="PHP">
+                    <option value="PHP v5.0"> v5.0 </option>
+                    <option value="PHP v7.0"> v7.0 </option>
+                    <option value="PHP v8.0"> v8.0 </option>
+                </optgroup>
+                <optgroup label="Python">
+                    <option value="Python v2.0"> v2.0 </option>
+                    <option value="Python v3.0"> v3.0 </option>
+                    <option value="Python v3.9" selected> v3.9 </option>
+                </optgroup>
+            </select>
+            <hr>
+            <textarea name="brief" cols=50" rows="10" placeholder="Write here what you wanna learn!!!" required></textarea>
+            <hr>
+            <input type="reset" value="Empty">
+            <input type="submit" value="Send">
+        </form>
+    </body>
+</html>

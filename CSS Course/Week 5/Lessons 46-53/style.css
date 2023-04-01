@@ -1,0 +1,83 @@
+/* 
+Flexible box :
+    Parent - Flex-box - properties: The element that has the property " display: flex " .
+        1. flex-direction { row (default), row-reverse, column, column-reverse } 
+            - Got effected by the direction of the page { ltr, rtl } the direction of the flex box updated accordingally.
+        2. flex-wrap { nowrap (default and adjust the size of the items to fit the content), wrap, wrap-reverse }
+            - How to treat the elements out of the bounds of the box
+            - take care that the width of the child elements using percentage of the content width
+        3. flex-flow: [flex-direction] [flex-wrap]
+        4. justify-content: Horizontally alignment of the whole content { flex-start, flex-end, center, space-between, space-around, space-evenlly }
+            - space-between: only between the elements such that if we have 3 elements then we will have 2 spaces
+            - space-around: one space berfore the element and one after it so if we have 3 elements then we will have 6 spaces
+            - space-evenlly: if we have 3 elements then we will have 4 spaces
+        5. display: inline-flex to make the box to be flex as usual but other elements can come besides it.
+
+    Child : the flex box childrean ( The following props are assigned to the childrean directly )
+        1. Flex-grow: 0 => default ( The childrean can grow to fit the content with the same portions except the child 
+            get a flex-grow higher )
+            i.e.
+                * {
+                    box-sizing: border-box;
+                } 
+                .child {
+                    flex-grow: 1;
+                }
+
+                .certain-child {
+                    flex-grow: 2;
+                }
+                
+                then if the total width of the flex-box is 800px with padding 20px then the content area is 760px
+                and if we have 6 childrean each of which has width 80px with margin-right 5px then each child will grow by 
+                x = remaining-width(800px - 40px - 30px - 480px) / 7 => 7 is because (5 * 1 + (the certain-child) 2 * 1)
+                except the certain-child will grow with portion of 2x.
+
+            the default value of the flex-grow being 0 is because no child must grow if there were remaining space on the flex box
+            without specifying this option manually by changing the number.
+
+        2. Flex-shrink: 1 => default 
+                if the size of the flex box is smaller than minimum width needed to conatin all the childrean then
+                the childrean must shrink.
+        
+        3. flex-basis: auto => default -> takes css-unit;
+            This property is related to the width if the flex-direction: row and related to the height of the flex-direction: column
+            Also it has no effect on the non flex-box childrean and also the elemenets arranged using the position property
+            It respects max-width property
+
+        4. flex: [flex-grow] [flex-shrink] [flex-basis] => Smart enough to get all your needs
+
+        5. align-self => auto default value -> makes any element can be on any place you want inside the flexbox
+
+        Huge mistake: 
+            "start" value is not the same as "flex-start" 
+            "end" value is not the same as "flex-end"
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.flex {
+    border: 2px solid red;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+}
+
+.flex div {
+    background-color: #f00;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* .special {
+    align-self: flex-end;
+} */

@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+ 
+:root {
+    --background-color: #ddd;
+    --padding: 10px;
+}
+
+.page {
+    padding: var(--padding, 10px);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #eee;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.header,
+.main-area,
+.footer {
+    flex-basis: 100%;
+
+    display: flex;
+}
+
+/* Header section */
+.logo {
+    flex-basis: 10%;
+    margin-right: 10px;
+    padding: var(--padding, 10px);
+    background-color: var(--background-color, #ddd);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links {
+    list-style: none;
+    padding: var(--padding, 10px);
+    margin: 0;
+
+    flex-grow: 1;
+
+    background-color: var(--background-color, #ddd);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.links li {
+    margin-right: 10px;
+}
+
+/* Main Section */
+.main-area {
+    height: 500px;
+    margin: 10px 0;
+}
+
+.content {
+    flex-grow: 1;
+    padding: var(--padding, 10px);
+    background-color: var(--background-color, #ddd);
+}
+
+.sidebar {
+    flex-basis:25%;
+    margin-left: 10px;
+    padding: var(--padding, 10px);
+    background-color: var(--background-color, #ddd);
+}
+
+/* Footer */
+.footer {
+    justify-content: space-between;
+
+    padding: var(--padding, 10px);
+    background-color: var(--background-color, #ddd);
+}

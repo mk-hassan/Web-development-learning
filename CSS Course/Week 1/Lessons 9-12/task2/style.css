@@ -1,0 +1,21 @@
+div {
+    width: 400px;
+    padding: 20px;
+    font-size: 25px;
+    margin: 50px;
+    outline: rgb(241, 237, 237) solid 15px;
+    background-color: rgb(241, 237, 237);
+}
+
+.shape-1 {
+    border-left: rgb(244, 114, 136) solid 10px;
+}
+
+.shape-2 {
+    border-left: rgb(187, 212, 23) solid 10px;
+    visibility: hidden;
+}
+
+.shape-3 {
+    border-left: rgb(29, 176, 0) solid 10px;
+}

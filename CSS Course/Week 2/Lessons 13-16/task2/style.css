@@ -1,0 +1,16 @@
+div {
+    /* Apperance */
+    color: #fdfdff;
+    font-size: 30px;
+    background-color: #a52a2a;
+
+    /* Allignments */
+    padding: 20px;
+    margin: 20px;
+
+    /* Dimensions */
+    width: fit-content;
+    max-width: 400px;
+    max-height: 100px;
+    overflow: hidden;
+}

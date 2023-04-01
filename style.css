@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+}
+.parent {
+    width: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #efefef;
+}
+
+.one {
+    width: 200px;
+    float: left;
+    background-color: #F0F;
+    padding: 20px;
+    box-sizing: border-box;
+}

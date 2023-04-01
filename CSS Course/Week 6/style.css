@@ -1,0 +1,67 @@
+/* 
+                                                        The GRID
+    Parent properties: 
+        1. display: grid -> to make the container diplayed as a grid
+        2. grid-template-columns -> defines the number of columns with the width of each column
+            ex: grid-template-columns: 20px 20% auto 1fr repeat(2, some unit) auto
+        3. grid-template-rows -> defines the number of rows with the height of each row
+            ex: grid-template-rows: 20px 20% auto 1fr repeat(2, some unit) auto
+        4. column-gap -> gap between columns
+        5. row-gap -> gap between rows
+        6. gap -> [column-gap] [row-gap] ( shorthand )
+        7. justify-content and align-content -> remember from flex
+            align-content always takes effect on grid system as it's always like multi line flex
+        8. grid-template-areas -> determine how the grid should look like by giving each grid cell a name and assign that
+            name to a specific element
+    
+    Childrean Properties:
+        grid-column: grid-column-start / grid-column-end
+            span keyword could be used on one of the 2 sides and should be calculated relative to the other side
+        grid-row: grid-row-start / grid-row-end
+            span keyword could be used on one of the 2 sides and should be calculated relative to the other side
+        grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end 
+        grid-area: name of the area defined in the grid-template-areas
+
+    Hints and tokens: 
+    1. fr is greedy and auto is shy
+    2. auto takes what exactly fits the element and expands if there's more space available as far as you didn't use 
+        justify-content or align-content or fr as it takes alrady the rest remember it's greedy.
+    3. If you define grid-column for an element to be lower than the col number it's currently in, then the element
+        will be moved to the next row with an empty  before it.
+        To prevent moving to the next row and the gap before it you must also force the row by using grid-row
+        and that row will be reordered to achieve the start and end column specifications.
+        Defining the grid-column with larger value will make only a gap
+    4. grid-row without grid-column is much smoother it makes the element on the first column by default without any gaps so you will need to 
+        determine the col number yourself.
+    
+                    <<< Use grid-row and grid-column always togeather to avoid any problems >>>
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.parent {
+    width: 600px;
+    height: 500px;
+    padding: 20px;
+    margin: 20px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 2px;
+
+    color: white;
+    background-color: #eee;
+}
+
+.parent div {
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: red;
+}
