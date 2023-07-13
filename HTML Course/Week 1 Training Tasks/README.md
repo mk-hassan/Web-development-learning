@@ -63,5 +63,5 @@ also the `<li>` tag has the value attribute wich determines the starting of coun
     <li> item3 </li>
   </ol>
   ```
-  As you can see the `value` or `start` attribute always takes numeric values but displayed as the `type` attribure determines. So if start is 3 and type is 'a' then start from the 3<sup>rd lowercase letter which is letter c.
+  As you can see the `value` or `start` attribute always takes numeric values but displayed as the `type` attribure determines. So if start is 3 and type is 'a' then start from the 3<sup>rd</sup> lowercase letter which is letter c.
 - Description list is a special list which used to dertemine items of the list using the `<dt>` tag and description for each item using the `<dd>` tag.
