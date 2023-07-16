@@ -149,7 +149,7 @@ and the audio tag may have many `<source>` elements with different audio file ex
       The previous file formats are not supported by this browser
   </audio>
 ``` 
-  ## Video tag `<video>`
+  ## Video tag `<audio>`
 
 - Block element, used for video content.
 - Has the following attributes :
@@ -180,3 +180,23 @@ and the video tag may have many `<source>` elements with different video file ex
     <track src="ge-subtitle.vtt" kind="subtitles" srclang="ge" label="German">
 </video>
 ``` 
+
+## HTML Entities
+
+Special characters or constructs can't be written in usual way.
+```html
+<!-- How to print the <p> as is -->
+<div> the <p> is meant for paragraphs </div>
+
+<!-- 
+  this previous syntax won't make the `<p>` to be printed as needed 
+  so we need to use what is called semantic elements
+-->
+
+<div> the &lt;p&gt; is meant for paragraphs </div>
+
+<!-- 
+  &lt; and &gt; are called semantic elements that we can't write them explecitely
+  other semantic elements are like the copy write sign and mathematical signs .
+-->
+```
