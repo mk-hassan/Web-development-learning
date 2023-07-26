@@ -1,15 +1,11 @@
-/* class selector */
-.title {
-}
+/* any element with class name title */
+.title {}
 
-/* Any element with ID selector nav */
-#nav {
-}
+/* Any element with ID nav */
+#nav {}
 
 /* Any div element */
-div {
-}
+div {}
 
 /* Any h2 element */
-h2 {
-}
+h2 {}

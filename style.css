@@ -1,18 +1,38 @@
-body {
-    background-color: black;
-}
-.parent {
-    width: 400px;
-    margin: 20px auto;
-    overflow: hidden;
-    padding: 20px;
-    background-color: #efefef;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.one {
-    width: 200px;
-    float: left;
-    background-color: #F0F;
-    padding: 20px;
-    box-sizing: border-box;
+.container {
+  width: 600px;
+  padding: 10px;
+  
+  margin: 20px auto;
+
+  background-color: #ddd;
+}
+
+.container div {
+  counter-increment: cnt;
+
+  width: calc(100% / 6);
+  height: 100px;
+  
+  float: left;
+
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: x-large;
+
+  color: white;
+  background-color: rgb(6, 80, 55);
+}
+
+.container div::before {
+  content: counter(cnt);
+}
+
+p {
+  clear: left;
 }
