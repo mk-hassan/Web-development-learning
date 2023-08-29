@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.letter-E,
+.letter-L {
+  display: inline-grid;
+  grid-template-columns: repeat(6, 70px);
+  grid-template-rows: repeat(9, 70px);
+
+  position: relative;
+}
+
+.letter-E {
+  margin-right: 50px;
+}
+
+.letter-E div,
+.letter-L div {
+  padding: 15px;
+  background-color: rgb(41, 40, 40);
+}
+
+.letter-E div:nth-child(1) {
+  grid-area: 1 / 1 / 10 / 1;
+}
+
+.letter-E div:nth-child(2) {
+  grid-area: 1 / 2 / 1 / -1;
+}
+
+.letter-E div:nth-child(3) {
+  grid-area: 5 / 2 / 5 / -1;
+}
+
+.letter-E div:nth-child(4) {
+  grid-area: 9 / 2 / 9 / -1;
+}
+
+.letter-L div:nth-child(1) {
+  grid-area: 1 / 1 / 10 / 1;
+}
+
+.letter-L div:nth-child(2) {
+  grid-area: 9 / 2 / 9 / -1;
+}
+
+.E-moving-square,
+.L-moving-square {
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+  background-color: #fea603 !important;
+}
+
+.E-moving-square {
+  right: 15px;
+  top: 15px;
+
+  animation-name: E-animation;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+
+.L-moving-square {  
+  right: 15px;
+  bottom: 15px;
+  opacity: 0;
+
+  animation-name: L-animation;
+  animation-duration: 5s;
+  animation-delay: 10s;
+  animation-timing-function: linear;
+}
+
+@keyframes E-animation {
+  10% {
+    transform: translate(-350px, 0);
+  }
+  20% {
+    transform: translate(-350px, 280px);
+  }
+  30% {
+    transform: translate(0, 280px);
+  }
+  40% {
+    transform: translate(-350px, 280px);
+  }
+  50% {
+    transform: translate(-350px, 560px);
+  }
+  60% {
+    transform: translate(0, 560px);
+  }
+  70% {
+    transform: translate(-350px, 560px);
+  }
+  80% {
+    transform: translate(-350px, 0);
+  }
+}
+
+@keyframes L-animation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-350px, 0);
+    opacity: 1;
+  }
+  90% {
+    transform: translate(-350px, -560px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-350px, -560px);
+    opacity: 0;
+  }
+}

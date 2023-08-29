@@ -119,7 +119,7 @@
     Inline
 
     - Do Not Repsepct Width, Height
-    - Respect Padding And Margin [ Just Wight + Left ]
+    - Respect Padding And Margin [ Just Right + Left ]
     - Do Not Add Line Break
 
     Inline-Block

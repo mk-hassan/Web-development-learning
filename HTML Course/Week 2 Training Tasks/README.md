@@ -149,13 +149,13 @@ and the audio tag may have many `<source>` elements with different audio file ex
       The previous file formats are not supported by this browser
   </audio>
 ``` 
-  ## Video tag `<audio>`
+  ## Video tag `<video>`
 
 - Block element, used for video content.
 - Has the following attributes :
   - width
   - height
-  - poseter="path to images" : this image will be used while loading the video.
+  - poster="path to images" : this image will be used while loading the video.
   - controls : **Mandatory** exists to make the audio file to appear on the page
   - autoplay
   - muted

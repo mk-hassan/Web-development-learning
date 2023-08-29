@@ -1,38 +1,37 @@
-* {
-  padding: 0;
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-  width: 600px;
-  padding: 10px;
-  
+main {
+  padding: 20px;
   margin: 20px auto;
 
-  background-color: #ddd;
+  display: grid;
+  gap: 5px;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  grid-template-areas: "k k k k l" "k k k k l";
 }
 
-.container div {
-  counter-increment: cnt;
-
-  width: calc(100% / 6);
-  height: 100px;
-  
-  float: left;
-
-  text-align: center;
-  line-height: 100px;
-  font-weight: bold;
-  font-size: x-large;
-
-  color: white;
-  background-color: rgb(6, 80, 55);
+.important {
+  grid-area: k;
 }
 
-.container div::before {
-  content: counter(cnt);
+section {
+  padding: 10px;
+
+  border-radius: .3em;
+  box-shadow: 1px 1px black;
 }
 
 p {
-  clear: left;
+  margin-bottom: 10px;
+}
+
+span {
+  font-weight: bold;
 }
