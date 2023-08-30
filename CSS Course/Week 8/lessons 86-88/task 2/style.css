@@ -1,0 +1,45 @@
+:root {
+  --border-color: #eee;
+  --border-size: 20px;
+}
+
+div {
+  width: 500px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  margin: 20px auto;
+  background-color: #eee;
+}
+
+.arrow::after {
+  content: "";
+  
+  border: var(--border-size) solid transparent;
+  position: absolute;
+}
+
+.top::after {
+  top: calc(-2 * var(--border-size));
+  border-bottom-color: var(--border-color);
+}
+
+.right::after {
+  right: calc(-2 * var(--border-size));
+  border-left-color: var(--border-color);
+}
+
+.bottom::after {
+  bottom: calc(-2 * var(--border-size));
+  border-top-color: var(--border-color);
+}
+
+.left::after {
+  left: calc(-2 * var(--border-size));
+  border-right-color: var(--border-color);
+}
