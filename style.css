@@ -6,32 +6,6 @@
   box-sizing: border-box;
 }
 
-main {
-  padding: 20px;
-  margin: 20px auto;
-
-  display: grid;
-  gap: 5px;
-  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-  grid-template-columns: repeat(5, minmax(200px, 1fr));
-  grid-template-areas: "k k k k l" "k k k k l";
-}
-
-.important {
-  grid-area: k;
-}
-
-section {
-  padding: 10px;
-
-  border-radius: .3em;
-  box-shadow: 1px 1px black;
-}
-
-p {
-  margin-bottom: 10px;
-}
-
-span {
-  font-weight: bold;
+div + p {
+  color: red;
 }

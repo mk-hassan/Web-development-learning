@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 20px;
+  margin: 20px auto;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.product {
+  flex-basis: calc(25% - 3px);
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  text-transform: capitalize;
+
+  background-color: #eee;
+}
+
+.product p {
+  margin-bottom: 10px;
+
+  font-size: x-large;
+  font-weight: bold;
+
+  color: #009788;
+}
+
+/* small screens & mobile phones */
+@media (max-width: 991px){
+  .product {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .product p {
+    color: black;
+  }
+}
+
+/* meduim screen */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .product {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+
+  .product p {
+    color: red;
+  }
+}
