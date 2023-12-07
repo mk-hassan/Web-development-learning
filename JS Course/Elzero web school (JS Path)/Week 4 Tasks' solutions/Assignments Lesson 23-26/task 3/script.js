@@ -1,0 +1,1 @@
+console.log(Number.MAX_SAFE_INTEGER.toFixed().length); // 16
