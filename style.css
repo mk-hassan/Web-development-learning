@@ -1,0 +1,14 @@
+
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+}
+
+div {
+  padding: 20px 15px;
+  line-height: 1.6;
+  border-radius: 10px;;
+  color: white;
+  background-image: linear-gradient(to right, #C33764, #1D2671);
+}
