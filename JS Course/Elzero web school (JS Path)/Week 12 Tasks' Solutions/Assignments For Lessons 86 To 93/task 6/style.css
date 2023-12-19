@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Shadows Into Light", sans-serif;
+}
+
+div.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 50vh;
+  background-image: linear-gradient(135deg, #A9F99F, #46ADD5);
+}
+
+form {
+  min-width: 50rem;
+  padding: 3rem 1.5rem;
+
+  display: grid;
+  gap: 10px;
+
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 15px 15px 20px 0px;
+}
+
+form .input {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+}
+
+form .input:focus {
+  outline: none;
+}
+
+form .input:focus::placeholder {
+  opacity: 0;
+}
+
+form input[type="submit"] {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+
+  border: none;
+  border-radius: 1rem;
+
+  color: white;
+  background-color: #009378;
+}
+
+.results {
+  padding: 3rem 2rem;
+
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.results .box {
+  padding: 2rem 1rem;
+
+  letter-spacing: 0.5rem;
+  text-align: center;
+
+  color: white;
+  border-radius: 1rem;
+  background-color: #fc5f2e;
+}
+

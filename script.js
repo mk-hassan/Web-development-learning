@@ -1,30 +1,20 @@
 "use strict"
 
-let obj1 = {
-  prop: 1,
-};
+for(let i = 0; i < 100; ++i) {
+  let product = document.createElement("div");
+  product.className = "product";
+  
+  let header = document.createElement("h3");
+  header.innerText = `Product ${i}`;
 
-let obj2 = {
-  prop: 2,
-  12.9: 23,
-  true: 9910,
-};
+  let disc = document.createElement("p");
+  disc.innerText = ` Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                      Cum vitae accusantium inventore impedit repellat aperiam, 
+                      temporibus cumque tenetur explicabo sit. Maxime, repellat. 
+                      Minima vitae velit aut nobis sint perferendis quo?`;
 
-let obj3 = {
-  prop: 3,
-};
+  product.appendChild(header);
+  product.appendChild(disc);
 
-let res = Object.assign(obj1, obj2);
-
-console.log(obj1);
-console.log(res);
-console.log(res === obj1);
-
-res.prop = 100;
-console.log(obj1);
-
-res[12.1] = 100;
-console.log(obj1);
-
-res[oop] = "oop";
-console.log(res.oop);
+  document.body.appendChild(product);
+}
