@@ -2,7 +2,7 @@
 
 let addingField = document.getElementsByClassName("classes-to-add")[0];
 let removingField = document.getElementsByClassName("classes-to-remove")[0];
-let currentElement = document.querySelector(".element.current");
+let currentElement = document.querySelector(".assign div:first-of-type");
 let classShowList = document.querySelector(".classes-list div");
 
 let noClassesIndicator = document.createTextNode("No Classes To Show");
@@ -11,6 +11,9 @@ window.onload = function() {
 	let classes = currentElement.classList;
 	for(let i = 0; i < classes.length; ++i) {
 		showNewClass(classes[i]);
+	}
+	if(classes.length === 0) {
+		classShowList.append(noClassesIndicator);
 	}
 };
 
