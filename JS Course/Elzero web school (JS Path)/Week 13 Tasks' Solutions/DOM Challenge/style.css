@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 1px;
+    font-family: var(--main-font-family);
+}
