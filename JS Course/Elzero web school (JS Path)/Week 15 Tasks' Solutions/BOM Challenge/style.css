@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --clr-main: #f4413e;
+}
+
+body {
+  font-size: 2rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.container {
+  width: fit-content;
+  padding: 2rem 1rem;
+  margin-inline: auto;
+}
+
+form {
+  display: flex;
+  /* align-items: center; */
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #eee;
+}
+
+form input[type="text"] {
+  width: 40rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  caret-color: var(--clr-main);
+}
+
+form input[type="submit"] {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+
+  cursor: pointer;
+  color: white;
+  background-color: var(--clr-main);
+}
+
+form input:focus {
+  outline: none;
+}
+
+.task-list {
+  padding: 2rem;
+  margin-top: 1rem;
+
+  display: grid;
+  gap: 1rem;
+  
+  border-radius: 1rem;
+  background-color: #eee;
+}
+
+.delete-task  {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+
+  cursor: pointer;
+  color: white;
+  background-color: var(--clr-main);
+}
+
+.task-container {
+  padding: 1rem; 
+
+  display: flex; 
+  align-items: center;
+  justify-content: space-between; 
+
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  background-color: white; 
+}
+
+
+
