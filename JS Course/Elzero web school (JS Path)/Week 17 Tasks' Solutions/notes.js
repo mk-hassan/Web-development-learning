@@ -39,7 +39,7 @@ console.log(res);
 function argsArr() {
   return arguments; // creating array of the passed arguments
 }
-console.log(argsArr(1, 2, 3, "ahmed"));
+console.log([...argsArr(1, 2, 3, "ahmed")]);
 
 
 // spread operator (...Iterable) it like extracts the content as is

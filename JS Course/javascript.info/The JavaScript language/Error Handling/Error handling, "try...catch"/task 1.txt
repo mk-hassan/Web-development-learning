@@ -1,0 +1,26 @@
+Compare the two code fragments.
+
+The first one uses finally to execute the code after try...catch:
+try {
+  work work
+} catch (err) {
+  handle errors
+} finally {
+  cleanup the working space
+}
+
+The second fragment puts the cleaning right after try...catch:
+try {
+  work work
+} catch (err) {
+  handle errors
+}
+cleanup the working space
+
+We definitely need the cleanup after the work, doesn’t matter if there was an error or not.
+Is there an advantage here in using finally or both code fragments are equal? If there is such an advantage, then give an example when it matters.
+
+Solution:
+There would be no difference in performing the cleanup between the two fragments, while in case of the functions it will differ as the 
+finally clause will be performed in case of the return or rethrowing statements, while the fragment without the finally will return the 
+control to the calling code without cleaningup the work space.
