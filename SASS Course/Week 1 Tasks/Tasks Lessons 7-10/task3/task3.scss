@@ -1,0 +1,6 @@
+// SASS Code
+$number: 4;
+
+.class {
+  color: if($number > 8, blue, if($number > 5, green, red))
+}
