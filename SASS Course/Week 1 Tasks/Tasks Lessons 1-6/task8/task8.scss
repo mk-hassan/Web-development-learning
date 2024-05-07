@@ -1,0 +1,13 @@
+// Do Not Edit Here
+$red: #e91e63;
+$green: #009688;
+
+// Add What You Want Here
+
+// Do Not Edit Here
+.box a {
+  color: $green;
+  &:hover {
+    color: $red;
+  }
+}

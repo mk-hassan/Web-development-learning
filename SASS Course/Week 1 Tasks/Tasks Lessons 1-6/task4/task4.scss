@@ -1,0 +1,15 @@
+.parent {
+  // the fist element with .sibling class name that is placed immediately after elements with .parent class name
+  & + .sibling {
+    margin: auto {
+      // define margin property
+      top: 10px; // change the top-margin property to 10px
+    }
+    
+    // all elements with class name .last and preceded by an element with .sibling class name which is place immediately
+    // after an element with .parent element
+    & ~ .last {
+      padding: 10px;
+    }
+  }
+}
