@@ -1,0 +1,12 @@
+@use "sass:math";
+
+$init: 1;
+
+@for $i from $init through 5 {
+  $temp: $i * 100;
+  .circle-#{$temp} {
+    width: #{$temp}px;
+    height: #{$temp}px;
+    border-radius: #{math.div($temp, 2)}px;
+  }
+}

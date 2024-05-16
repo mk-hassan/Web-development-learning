@@ -1,0 +1,8 @@
+@use "sass:math";
+
+$GRID-COLS: math.div(100%, 16);
+@for $i from 1 through 16 {
+  .col-#{$i} {
+    width: $GRID-COLS * $i;
+  }
+}

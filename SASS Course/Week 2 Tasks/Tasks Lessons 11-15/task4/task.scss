@@ -1,0 +1,13 @@
+@use "sass:math";
+
+$init: 1;
+
+@while $init <= 5 {
+  $temp: $init * 100;
+  .circle-#{$temp} {
+    width: #{$temp}px;
+    height: #{$temp}px;
+    border-radius: #{math.div($temp, 2)}px;
+  }
+  $init: $init + 1
+}

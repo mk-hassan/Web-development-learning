@@ -1,0 +1,52 @@
+/// mixins => a way to define reusable and configurable stles or style-rules.
+
+/// mixins' benifits:
+///   1. Define resuable and configurable styles that can be dropped into a single style rule.
+///   2. Define style rules that can be nested into other rules.
+///   3. Can just serve to modify variables!!!!!
+///   4. It can distribute collections of styles in libraries. (mixins can used on multiple scss files)
+
+/// syntax: @mixin <name> OR @mixin <name> (<params>)
+/// @mixin is an at-rule extended by scss over at-rules of css.
+/// <name> the identifier of the mixin.
+///   naming rules:
+///     1. Not begin with -- .
+///     3. hyphens and underscores as identical.
+///     2. can contain Statements like "Interpolation" but not top-level-statements.
+/// (<params>) optional list of params passed to the mixin body.
+
+/// included into a rule using @include at-rule 
+/// syntax: @include <mixin name> OR @include <mixin name> (<params>)
+
+@mixin mixin_without-params {
+  padding: 10px {
+    top: 20px;
+  }
+
+  ;
+
+  .vertical-lists {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@mixin mixin_with_params($padding, $color) {
+  background-color: $color;
+
+  span {
+    display: block;
+    padding: $padding;
+    color: $color;
+  }
+}
+
+/// Arguments
+/// Argument lists can also have trailing commas.
+/// Mixins are included with same number of argumnets.
+/// Positional and optional arguments.
+/// Optinal arguments have default values.

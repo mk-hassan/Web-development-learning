@@ -1,0 +1,15 @@
+$num: 2;
+$start: 100;
+$end: 1600;
+
+@function double($size) {
+  @return $size * $num;
+}
+
+@while $start <= $end {
+  .box-#{$start} {
+    width: #{$start}px;
+    height: #{$start}px;
+  }
+  $start: $start * 2;
+} 
