@@ -30,7 +30,7 @@ function getLocalDay(date) {
   if (day === 0) return 7;
   return day;
 }
-let date3 = new Date(2012, 0, 1);  // 3 Jan 2012
+let date3 = new Date(2012, 0, 3);  // 3 Jan 2012
 console.log(getLocalDay(date3));
 console.log("\n");
 
